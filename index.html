@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>UMAR ROYALE â€” Haute Parfumerie</title>
+    <meta name="description"
+        content="UMAR ROYALE â€” Haute Parfumerie. Handcrafted rare botanical fragrances, 38% extrait concentration, small batch. Karachi, Pakistan.">
+    <meta name="theme-color" content="#f7f4ee">
+    <link rel="icon" href="assets/u.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/u.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         INTRO â€” animated logo reveal (first look)
+         ============================================================ -->
+    <div class="intro" id="intro" aria-hidden="true">
+        <div class="intro-col l"></div>
+        <div class="intro-col r"></div>
+        <div class="intro-ring"></div>
+        <div class="intro-ring b"></div>
+
+        <div style="display:grid;place-items:center">
+            <svg class="intro-mark" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+                <defs>
+                    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#e9d6a4" />
+                        <stop offset=".5" stop-color="#c9a24a" />
+                        <stop offset="1" stop-color="#8a6c26" />
+                    </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="55" stroke="url(#gGold)" stroke-width=".7" opacity=".55" />
+                <circle cx="60" cy="60" r="47" stroke="url(#gGold)" stroke-width="1.6" stroke-dasharray="295"
+                    stroke-dashoffset="295" stroke-linecap="round">
+                    <animate attributeName="stroke-dashoffset" from="295" to="0" dur="1.9s" fill="freeze" />
+                </circle>
+                <path d="M34 84V36h7l13 32V36h7v48h-7L41 52v32z" fill="url(#gGold)">
+                    <animate attributeName="opacity" from="0" to="1" dur=".7s" begin=".7s" fill="freeze" />
+                </path>
+                <path d="M64 84V36h17c8 0 13 4 13 11 0 5-3 8-7 9 5 1 8 5 8 10 0 8-6 18-14 18zm7-28h9c4 0 7-2 7-5s-3-5-7-5h-9zm0 22h10c5 0 9-4 9-8s-4-8-9-8H71z"
+                    fill="url(#gGold)">
+                    <animate attributeName="opacity" from="0" to="1" dur=".7s" begin=".95s" fill="freeze" />
+                </path>
+            </svg>
+
+            <p class="intro-word">Haute Parfumerie</p>
+            <div class="intro-bar"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         NAV
+         ============================================================ -->
+    <header class="nav" id="nav">
+        <div class="nav-in">
+            <a href="#/" class="logo" aria-label="UMAR ROYALE home">
+                <span class="seal">
+                    <svg class="seal-txt" viewBox="0 0 100 100" aria-hidden="true">
+                        <defs>
+                            <path id="sealPath" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" />
+                        </defs>
+                        <text><textPath href="#sealPath">UMAR ROYALE â€¢ HAUTE PARFUMERIE â€¢ EST 2012 â€¢ </textPath></text>
+                    </svg>
+                    <span class="seal-core">UR</span>
+                </span>
+                <span class="logo-type">
+                    <b>UMAR <i>ROYALE</i></b>
+                    <small>HAUTE PARFUMERIE</small>
+                </span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#/">Home</a>
+                <a href="#/shop">Collection</a>
+                <a href="#/shop?tag=bestseller">Bestsellers</a>
+                <a href="#/shop?tag=new">New In</a>
+                <a href="#/shop?tag=sale">Offers</a>
+                <a href="#/about">Maison</a>
+                <a href="#/contact">Contact</a>
+            </nav>
+
+            <div class="nav-acts">
+                <button class="icon-btn" id="searchOpen" aria-label="Search">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>
+                </button>
+                <a href="#/wishlist" class="icon-btn" aria-label="Wishlist">
+                    <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.3A3.7 3.7 0 0 1 12 8a3.7 3.7 0 0 1 7 2.7C19 15.6 12 20 12 20z" /></svg>
+                    <span class="dot" id="wishCount">0</span>
+                </a>
+                <button class="icon-btn" id="cartOpen" aria-label="Shopping bag">
+                    <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8z" /><path d="M9 8V6.5a3 3 0 0 1 6 0V8" /></svg>
+                    <span class="dot" id="cartCount">0</span>
+                </button>
+                <button class="icon-btn burger" id="burger" aria-label="Menu">
+                    <svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" /></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="drawer-nav" id="drawerNav" aria-label="Mobile">
+        <a href="#/">Home</a>
+        <a href="#/shop">Collection</a>
+        <a href="#/shop?tag=bestseller">Bestsellers</a>
+        <a href="#/shop?tag=new">New In</a>
+        <a href="#/shop?tag=sale">Offers</a>
+        <a href="#/about">Maison</a>
+        <a href="#/contact">Contact</a>
+    </nav>
+
+    <!-- ============================================================
+         VIEWS
+         ============================================================ -->
+    <main id="homeView">
+
+        <!-- ---------- HERO (video + animated) ---------- -->
+        <section class="hero">
+            <div class="stage" aria-hidden="true">
+                <div class="kb"><img src="assets/01.png" alt="" loading="eager"></div>
+                <div class="kb"><img src="assets/05.png" alt=""></div>
+                <div class="kb"><img src="assets/02.png" alt=""></div>
+                <video class="hero-video" id="heroVideo" muted loop playsinline autoplay preload="metadata"
+                    poster="assets/01.png">
+                    <source src="assets/hero.mp4" type="video/mp4">
+                </video>
+                <div class="veil"></div>
+                <div class="dust" id="dust"></div>
+            </div>
+
+            <div class="hero-in">
+                <div>
+                    <span class="eyebrow rv in">Haute Parfumerie Â· Est. 2012 Â· Karachi</span>
+                    <h1 class="hero-title rv in d1">Scent is<br>the <em>signature</em><br>you cannot fake.</h1>
+                    <p class="hero-lead rv in d2">Rare botanicals, 38% extrait concentration, blended in small batches
+                        and hand-filled in our atelier. For those who are never mistaken for anyone else.</p>
+                    <div class="hero-cta rv in d3">
+                        <a href="#/shop" class="btn">Explore Collection <span class="i">â†’</span></a>
+                        <a href="#/shop?tag=bestseller" class="btn ghost">Bestsellers</a>
+                    </div>
+                    <div class="hero-stats rv in d4">
+                        <div class="hero-stat"><b id="hs1">12</b><small>Signature Scents</small></div>
+                        <div class="hero-stat"><b>38%</b><small>Extrait Strength</small></div>
+                        <div class="hero-stat"><b>120+</b><small>Rare Ingredients</small></div>
+                        <div class="hero-stat"><b>12h</b><small>Max Longevity</small></div>
+                    </div>
+                </div>
+
+                <div class="hero-vis rv in d3">
+                    <span class="orb a"></span>
+                    <span class="orb b"></span>
+                    <div class="flacon">
+                        <img src="assets/01.png" alt="UMAR ROYALE signature flacon">
+                        <span class="flacon-txt">NÂº 001 Â· Signature 50ml</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-cue" aria-hidden="true"><span>SCROLL</span><i></i></div>
+        </section>
+
+        <!-- ---------- MARQUEE ---------- -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track" id="marquee"></div>
+        </div>
+
+        <!-- ---------- COLLECTION ---------- -->
+        <section class="sec" id="collection">
+            <div class="wrap">
+                <div class="sec-head row rv">
+                    <div>
+                        <span class="sec-no">01</span>
+                        <span class="eyebrow">Curated Selection</span>
+                        <h2 class="sec-title">The <em>Collection</em></h2>
+                        <p class="sec-sub">Every flacon in the house, from the oud signatures to the freshest eaux â€”
+                            filtered live from the catalogue.</p>
+                    </div>
+                    <a href="#/shop" class="btn ghost">All Fragrances</a>
+                </div>
+
+                <div class="filters rv d1" id="homeFilters"></div>
+                <div class="grid" id="homeGrid"></div>
+            </div>
+        </section>
+
+        <!-- ---------- SHOWCASE ---------- -->
+        <section class="sec dark">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <span class="sec-no">02</span>
+                    <span class="eyebrow">The Icons</span>
+                    <h2 class="sec-title">Three that <em>defined</em> us</h2>
+                </div>
+                <div class="showcase rv d1" id="showcase"></div>
+            </div>
+        </section>
+
+        <!-- ---------- STORY ---------- -->
+        <section class="sec" id="story">
+            <div class="wrap split">
+                <div class="split-vis rv">
+                    <img src="assets/05.png" alt="UMAR ROYALE atelier">
+                    <div class="stamp"><small>EST.</small><b>2012</b></div>
+                </div>
+                <div class="rv d1">
+                    <span class="sec-no">03</span>
+                    <span class="eyebrow">The Legacy</span>
+                    <h2 class="sec-title">Our <em>Story</em></h2>
+                    <p class="sec-sub">UMAR ROYALE blends centuries-old French distillation artistry with modern
+                        restraint. We produce in small batches, formulate to a 38% extrait concentration, and source
+                        every botanical from suppliers we have visited in person.</p>
+
+                    <div class="points">
+                        <div class="point"><span class="n">01</span>
+                            <div><b>Vegan &amp; Cruelty-Free</b><small>Certified, animal-safe, always.</small></div>
+                        </div>
+                        <div class="point"><span class="n">02</span>
+                            <div><b>38% Extrait Concentration</b><small>Maximum depth, all-day sillage.</small></div>
+                        </div>
+                        <div class="point"><span class="n">03</span>
+                            <div><b>Hand-Filled in Small Batches</b><small>No two macerations identical.</small></div>
+                        </div>
+                        <div class="point"><span class="n">04</span>
+                            <div><b>Insured Nationwide Shipping</b><small>Free above Rs. 5,000.</small></div>
+                        </div>
+                    </div>
+
+                    <a href="#/about" class="btn ghost">Read our full story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- PROCESS ---------- -->
+        <section class="sec dark">
+            <div class="wrap">
+                <div class="sec-head rv">
+                    <span class="sec-no">04</span>
+                    <span class="eyebrow">The Ritual</span>
+                    <h2 class="sec-title">How to wear <em>it</em></h2>
+                </div>
+                <div class="steps rv d1">
+                    <div class="step"><b>01</b><h4>Prime</h4><p>Apply to clean, moisturised skin â€” the base holds the
+                            notes far longer than bare skin ever will.</p></div>
+                    <div class="step"><b>02</b><h4>Target</h4><p>Wrists, the base of the throat, behind the ears and
+                            the collarbone. Pulse points only â€” never rub.</p></div>
+                    <div class="step"><b>03</b><h4>Wait</h4><p>Give the top notes twenty minutes. The citrus and the
+                            fruit openers are meant to disappear first.</p></div>
+                    <div class="step"><b>04</b><h4>Let it settle</h4><p>Two or three sprays, then nothing. The
+                            fragrance should find people long before you point at it.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- FAQ ---------- -->
+        <section class="sec" id="faq">
+            <div class="wrap" style="max-width:900px">
+                <div class="sec-head rv">
+                    <span class="sec-no">05</span>
+                    <span class="eyebrow">Guidance</span>
+                    <h2 class="sec-title">Frequently <em>Asked</em></h2>
+                </div>
+                <div class="acc rv d1">
+                    <details open>
+                        <summary>How long does one bottle last?</summary>
+                        <p>At 38% extrait the scent lasts 8â€“12 hours on skin. With everyday wear a 50ml flacon
+                            comfortably exceeds a year.</p>
+                    </details>
+                    <details>
+                        <summary>Do you ship outside Pakistan?</summary>
+                        <p>Not yet. We currently deliver nationwide within Pakistan only. Message the concierge for a
+                            bespoke arrangement and we will work something out.</p>
+                    </details>
+                    <details>
+                        <summary>Can I return an opened bottle?</summary>
+                        <p>Unopened and unused bottles may be returned within 7 days of delivery for a full refund. For
+                            hygiene reasons opened testers and used packaging cannot be accepted.</p>
+                    </details>
+                    <details>
+                        <summary>How do I place an order?</summary>
+                        <p>Add to bag, then check out. Choose Cash on Delivery or send the advance and enter your
+                            transaction ID â€” your order summary is also sent straight to our WhatsApp for confirmation.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ---------- CONTACT ---------- -->
+        <section class="sec dark" id="contact">
+            <div class="wrap split">
+                <div class="rv">
+                    <span class="sec-no">06</span>
+                    <span class="eyebrow">Get in Touch</span>
+                    <h2 class="sec-title">The <em>Concierge</em></h2>
+                    <p class="sec-sub">Questions about a note, a gift, or which bottle suits whom â€” write to us and a
+                        human answers.</p>
+
+                    <div class="points" style="margin-top:2.4rem">
+                        <div class="point"><span class="n">B</span>
+                            <div><b>Boutique</b><small id="fAddress"></small></div>
+                        </div>
+                        <div class="point"><span class="n">P</span>
+                            <div><b>Telephone</b><small id="fPhone"></small></div>
+                        </div>
+                        <div class="point"><span class="n">E</span>
+                            <div><b>Email</b><small id="fEmail"></small></div>
+                        </div>
+                        <div class="point"><span class="n">W</span>
+                            <div><b>WhatsApp</b><small><a id="fWa" href="#" target="_blank" rel="noopener"
+                                        style="color:var(--gold-lt)">Message the concierge</a></small></div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="co-box rv d1" id="contactForm" novalidate>
+                    <div class="f">
+                        <div>
+                            <label for="cName">Your Name</label>
+                            <input id="cName" name="name" type="text" placeholder="FULL NAME" required>
+                        </div>
+                        <div>
+                            <label for="cEmail">Email</label>
+                            <input id="cEmail" name="email" type="email" placeholder="YOUR EMAIL" required>
+                        </div>
+                        <div>
+                            <label for="cMsg">Message</label>
+                            <textarea id="cMsg" name="message" rows="4" placeholder="HOW MAY WE HELP?" required></textarea>
+                        </div>
+                        <p class="err" id="cErr" hidden></p>
+                        <button class="btn full" type="submit">Send Message <span class="i">â†’</span></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="routeView" hidden></div>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="foot">
+        <div class="wrap">
+            <div class="foot-grid">
+                <div>
+                    <a href="#/" class="logo" style="margin-bottom:1.2rem">
+                        <span class="seal">
+                            <svg class="seal-txt" viewBox="0 0 100 100" aria-hidden="true">
+                                <defs>
+                                    <path id="sealPath2" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0" />
+                                </defs>
+                                <text><textPath href="#sealPath2">UMAR ROYALE â€¢ HAUTE PARFUMERIE â€¢ EST 2012 â€¢ </textPath></text>
+                            </svg>
+                            <span class="seal-core">UR</span>
+                        </span>
+                        <span class="logo-type">
+                            <b>UMAR <i>ROYALE</i></b>
+                            <small>HAUTE PARFUMERIE</small>
+                        </span>
+                    </a>
+                    <p>Haute Parfumerie â€” Karachi. Crafting memory, one drop at a time.</p>
+                    <div class="soc">
+                        <a href="#" id="footIg" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 5a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zm6.1-8.1a1.1 1.1 0 1 1-2.3 0 1.1 1.1 0 0 1 2.3 0z"/></svg></a>
+                        <a href="#" id="footWa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.1 14.1c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.4-1-2.6s.6-1.8.9-2.1c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.1.1-.3.3-.1.5.1.3.7 1.2 1.5 1.9 1 .9 1.8 1.2 2 1.3.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.5.2.6.3.1.2.1.7-.1 1.3z"/></svg></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Explore</h4>
+                    <div class="foot-links">
+                        <a href="#/shop">All Fragrances</a>
+                        <a href="#/shop?tag=bestseller">Bestsellers</a>
+                        <a href="#/shop?tag=new">New Arrivals</a>
+                        <a href="#/shop?tag=sale">Offers</a>
+                        <a href="#/wishlist">Wishlist</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Maison</h4>
+                    <div class="foot-links">
+                        <a href="#/about">Our Story</a>
+                        <a href="#/contact">Contact</a>
+                        <a href="#/faq">Shipping &amp; Returns</a>
+                        <a href="#/checkout">Your Bag</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Newsletter</h4>
+                    <p>Privileged previews and private compositions, before anyone else.</p>
+                    <form class="news" id="newsForm">
+                        <input type="email" name="email" placeholder="YOUR EMAIL" required aria-label="Email address">
+                        <button type="submit" aria-label="Subscribe">
+                            <svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" /></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="foot-bar">
+                <span>Â© 2026 UMAR ROYALE â€” All Rights Reserved</span>
+                <span>Crafted in Karachi Â· HTML, CSS &amp; a whisper of JavaScript</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         CART DRAWER (with suggested products)
+         ============================================================ -->
+    <div class="veil-bg" id="veil"></div>
+
+    <aside class="cart" id="cart" role="dialog" aria-label="Shopping bag">
+        <div class="cart-top">
+            <h3>Your Bag <span id="bagCount">(0)</span></h3>
+            <button class="x" id="cartClose" aria-label="Close bag">&times;</button>
+        </div>
+
+        <div class="ship-bar">
+            <p id="shipMsg"></p>
+            <div class="track"><i id="shipTrack"></i></div>
+        </div>
+
+        <div class="cart-list" id="cartList"></div>
+
+        <!-- Suggested products inside the bag -->
+        <div class="sugg" id="sugg" hidden>
+            <div class="sugg-head">
+                <svg viewBox="0 0 24 24"><path d="M12 3l2.3 4.9 5.2.7-3.8 3.7 1 5.2-4.7-2.5-4.7 2.5 1-5.2L4.5 8.6l5.2-.7z" /></svg>
+                <h4>Complete the Ritual</h4>
+                <em id="suggCount"></em>
+            </div>
+            <p class="sugg-why" id="suggWhy"></p>
+            <div class="sugg-row" id="suggRow"></div>
+        </div>
+
+        <div class="cart-foot">
+            <div class="rowline"><span>Subtotal</span><b id="cartSubtotal">Rs. 0</b></div>
+            <div class="rowline"><span>Shipping</span><b id="cartShip">â€”</b></div>
+            <div class="rowline total"><span>Total</span><b id="cartTotal">Rs. 0</b></div>
+            <a href="#/checkout" class="btn full" id="checkoutBtn">Proceed to Checkout <span class="i">â†’</span></a>
+            <button class="btn ghost full" id="keepShopping">Keep Shopping</button>
+        </div>
+    </aside>
+
+    <!-- ============================================================
+         SEARCH OVERLAY
+         ============================================================ -->
+    <div class="searchp" id="searchP" role="dialog" aria-label="Search">
+        <div class="search-box">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem">
+                <span class="eyebrow" style="margin:0">Search the Maison</span>
+                <button class="x" id="searchClose" style="margin-left:auto" aria-label="Close search">&times;</button>
+            </div>
+            <input class="search-in" id="searchIn" type="search" placeholder="Oud, Rose, Amber..." autocomplete="off">
+            <div class="search-hint" id="searchHint">
+                <em>Try</em>
+                <button class="chip" data-q="oud">Oud</button>
+                <button class="chip" data-q="rose">Rose</button>
+                <button class="chip" data-q="amber">Amber</button>
+                <button class="chip" data-q="leather">Leather</button>
+                <button class="chip" data-q="fresh">Fresh</button>
+            </div>
+            <div class="search-res" id="searchRes"></div>
+        </div>
+    </div>
+
+    <div class="toasts" id="toasts"></div>
+
+    <button class="backtop" id="backtop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24"><path d="M12 20V5M6 11l6-6 6 6" /></svg>
+    </button>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,77 +1,66 @@
-# UMAR ROYALE — Perfume E-commerce Website
+# UMAR ROYALE — Haute Parfumerie
 
-A luxury perfume e-commerce website with a comprehensive admin panel, built with vanilla HTML, CSS, and JavaScript.
+A fully static luxury perfume storefront. One file, no server, no build step, no dependencies.
 
-## Features
-
-### Main Website (index.html)
-- Responsive Design — 320px to 4K screens
-- Pure CSS Components — checkbox/radio hacks, scroll-driven animations, lightbox galleries, carousels, filterable product grids
-- E-commerce — product catalog, shopping cart, checkout with WhatsApp integration, order management
-- Dark/light theme toggle, cinematic intro animation, glass-morphism effects
-- Mobile-optimized touch interface with responsive navigation drawer
-
-### Admin Panel (admin.html)
-- Professional CMS dashboard with Bootstrap 5
-- Live data sync with storefront via localStorage
-- Product management, order tracking, settings
-- Passcode-protected access
-
-## Tech Stack
-
-- **HTML5** — semantic structure
-- **CSS3** — Grid, Flexbox, Custom Properties, Scroll-driven animations, `:has()`, `:target()`
-- **JavaScript** — Vanilla, localStorage persistence, cross-tab sync
-- **No build tools, no frameworks, no dependencies**
-
-## File Structure
+## Structure
 
 ```
 .
-├── index.html          ← Main storefront
-├── admin.html          ← Admin/CMS panel
-├── store.js            ← E-commerce engine (cart, products, checkout)
-├── server.js           ← Local Node.js dev server (optional)
-├── package.json        ← NPM manifest (no dependencies)
-├── css/
-│   └── index.css       ← All website styles (1950 lines)
-├── assets/
-│   ├── 01.png–05.png   ← Product images
-│   ├── images.jpg      ← Product thumbnail
-│   └── u.png           ← Favicon
-└── README.md
+├── index.html   ← the entire site (HTML + CSS + JS + product data)
+└── assets/      ← product images (01–05.png), u.png favicon, optional hero.mp4
 ```
 
-## Usage
+Open `index.html` directly in any browser, or host the folder on GitHub Pages / Netlify / any static CDN.
 
-### Quick Start (no server needed)
-Open `index.html` directly in a browser. The site works as a static website.
+## Managing products (no admin panel)
 
-### Local Development Server
-```bash
-npm start
-# Server runs at http://localhost:3000
+Everything lives in one editable array in `index.html`:
+
+1. Open `index.html`, search for `var CATALOG = [`.
+2. Each entry is one product:
+
+```js
+{
+    name: "Black and Silver",
+    tagline: "Eau de Parfum",
+    description: "…",
+    price: 5000,        // 50ml reference price
+    salePrice: 4250,    // set null to remove the offer
+    stock: 25,          // 0 makes it "Sold Out"
+    category: "Signature",   // Signature | Rare | Fresh
+    gender: "Men",           // Men | Women | Unisex
+    family: "Amber Woody",
+    concentration: "Eau de Parfum",
+    top: "…", heart: "…", base: "…",
+    longevity: "8–10 hours",
+    sillage: "Heavy",
+    ingredients: "…",
+    howToUse: "…",
+    image: "assets/01.png",
+    images: ["assets/01.png", "assets/02.png"],
+    bestseller: true,   // used by Bestsellers + suggestion scoring
+    featured: true,
+    new: false,          // shows the "New" flag
+    reviews: [ { a: "Bilal R.", r: 5, t: "Worth every rupee", b: "…" } ]
+}
 ```
 
-### Admin Panel
-Navigate to `admin.html` (link in the footer). Default passcode: `royale2026`.
+- Sizes (30ml / 50ml / 100ml) are derived automatically from the price above.
+- `bestseller: true` and `on sale` items are scored into the **"Complete the Ritual"** suggestion rail inside the bag, so the cart suggests related scents based on what is already in it.
 
-### GitHub Pages Deployment
-Push to GitHub and enable Pages in repo settings. The site is fully static — no server required.
+## Site settings
 
-## Customization
+At the top of the script, `var STORE = {…}` holds currency, WhatsApp number, phone, email, address,
+shipping rates (`shippingFlat`, `freeShippingOver`) and available payment methods.
 
-- **Products**: Edit the `DEFAULT_PRODUCTS` array in `store.js`
-- **Branding**: Modify CSS variables in `:root` block of `css/index.css`
-- **WhatsApp number**: Configure in admin panel settings
-- **Content**: Update HTML directly in `index.html`
+## Hero video (optional)
 
-## Browser Support
+Drop a file named `hero.mp4` into `assets/` and it will play behind the hero. If the file is absent,
+the hero falls back to an animated Ken-Burns image sequence — the page always looks alive either way.
 
-- Chrome, Firefox, Safari, Edge (desktop)
-- Android Chrome, iOS Safari (mobile)
-- Tablets (iPad, Android)
+## Order flow
 
-## License
-
-ISC
+- Bag + wishlist persist in the browser's `localStorage`.
+- Checkout records the order locally and offers a one-tap **Send to WhatsApp** message with the full
+  order summary on the confirmation page.
+- No customer data leaves the browser except through the WhatsApp link the customer chooses to open.
