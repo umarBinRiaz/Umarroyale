@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIR PERFUMES | Premium Luxury Fragrances</title>
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Google Fonts: Serif for luxury headings & Sans for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Montserrat', 'sans-serif']
+          },
+          colors: {
+            noir: {
+              black: '#0D0D0D',
+              dark: '#141414',
+              gray: '#888888',
+              light: '#F8F8F8'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #FFFFFF;
+      color: #141414;
+    }
+    
+    .font-serif {
+      font-family: 'Cinzel', serif;
+    }
+
+    /* Subtle tracking for luxury aesthetic */
+    .tracking-luxury {
+      letter-spacing: 0.25em;
+    }
+    
+    .tracking-wide-custom {
+      letter-spacing: 0.15em;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+
+  <!-- TOP NAVIGATION BAR -->
+  <header class="w-full bg-white border-b border-gray-100 py-6 px-8 md:px-16 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="font-serif text-xl md:text-2xl font-semibold tracking-luxury uppercase text-black">
+        NOIR PERFUMES
+      </a>
+
+      <!-- Center Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-10 text-xs font-medium tracking-wide-custom uppercase">
+        <a href="#home" class="text-black border-b border-black pb-1">HOME</a>
+        <a href="#shop" class="text-noir-gray hover:text-black transition-colors pb-1">SHOP</a>
+        <a href="#about" class="text-noir-gray hover:text-black transition-colors pb-1">ABOUT</a>
+        <a href="#contact" class="text-noir-gray hover:text-black transition-colors pb-1">CONTACT</a>
+      </nav>
+
+      <!-- Cart Icon & Actions -->
+      <div class="flex items-center space-x-6">
+        <button id="cartBtn" class="relative text-black hover:opacity-70 transition-opacity">
+          <i data-lucide="shopping-bag" class="w-5 h-5 stroke-[1.5]"></i>
+          <span id="cartCount" class="absolute -top-1 -right-2 text-[10px] font-semibold bg-black text-white rounded-full w-4 h-4 flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="w-full bg-noir-black text-white py-28 md:py-40 px-6 text-center flex flex-col items-center justify-center">
+    <div class="max-w-4xl mx-auto space-y-6">
+      
+      <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl tracking-luxury font-normal leading-tight uppercase">
+        THE ART OF<br/>SCENT
+      </h1>
+      
+      <p class="text-noir-gray text-xs sm:text-sm tracking-luxury uppercase font-light max-w-xl mx-auto">
+        PREMIUM LUXURY FRAGRANCES
+      </p>
+
+      <div class="pt-8">
+        <a href="#shop" class="inline-block bg-white text-black px-10 py-4 text-xs font-semibold tracking-wide-custom uppercase hover:bg-black hover:text-white hover:border hover:border-white transition-all duration-300">
+          EXPLORE COLLECTION
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURED SECTION -->
+  <section id="shop" class="w-full bg-white py-20 px-6 md:px-16 text-center">
+    <div class="max-w-7xl mx-auto space-y-4">
+      
+      <h2 class="font-serif text-2xl md:text-3xl tracking-luxury uppercase font-semibold text-black">
+        FEATURED
+      </h2>
+      
+      <p class="text-noir-gray text-xs tracking-wide-custom font-light">
+        Our most coveted creations
+      </p>
+
+      <!-- Products Grid -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 pt-16 text-left">
+        <!-- Dynamic Products Injected via JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT / CRAFT SECTION -->
+  <section id="about" class="w-full bg-noir-light py-24 px-6 md:px-16 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6">
+        <span class="text-noir-gray text-xs tracking-luxury uppercase block">Essence & Craft</span>
+        <h3 class="font-serif text-2xl md:text-3xl tracking-luxury uppercase font-semibold text-black leading-relaxed">
+          ELEGANCE IN EVERY DROP
+        </h3>
+        <p class="text-noir-gray text-xs leading-relaxed tracking-wide font-light">
+          Each fragrance is meticulously formulated using the finest raw materials gathered from around the world. Designed for those who appreciate understated minimalism and unforgettable scent signatures.
+        </p>
+      </div>
+      <div class="aspect-[4/5] bg-neutral-200 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=800&auto=format&fit=crop" 
+             alt="Luxury Perfume Bottle" 
+             class="w-full h-full object-cover grayscale contrast-125 hover:scale-105 transition-transform duration-700">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="w-full bg-white border-t border-gray-100 py-16 px-8 md:px-16 text-center md:text-left">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-xs">
+      
+      <div class="space-y-4 md:col-span-2">
+        <span class="font-serif text-lg font-semibold tracking-luxury uppercase text-black block">NOIR PERFUMES</span>
+        <p class="text-noir-gray max-w-sm leading-relaxed font-light">
+          Curating timeless, luxury olfactory experiences.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-semibold tracking-wide uppercase text-black">Navigation</h4>
+        <ul class="space-y-2 text-noir-gray font-light">
+          <li><a href="#home" class="hover:text-black">Home</a></li>
+          <li><a href="#shop" class="hover:text-black">Shop</a></li>
+          <li><a href="#about" class="hover:text-black">About</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-semibold tracking-wide uppercase text-black">Contact</h4>
+        <p class="text-noir-gray font-light">concierge@noirperfumes.com</p>
+        <p class="text-noir-gray font-light">+92 340 0085347</p>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-noir-gray font-light gap-4">
+      <p>© 2026 NOIR PERFUMES. ALL RIGHTS RESERVED.</p>
+      <div class="flex space-x-6">
+        <a href="#" class="hover:text-black">PRIVACY</a>
+        <a href="#" class="hover:text-black">TERMS</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SLIDE-OVER MODAL -->
+  <div id="cartModal" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
+    <div id="cartOverlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div id="cartSidebar" class="absolute top-0 right-0 h-full w-full max-w-md bg-white border-l border-gray-200 p-8 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out pointer-events-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-gray-100">
+          <h3 class="font-serif text-lg font-semibold tracking-luxury uppercase text-black">BAG</h3>
+          <button id="closeCartBtn" class="text-noir-gray hover:text-black p-2">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div id="cartItemsList" class="py-6 space-y-4 max-h-[60vh] overflow-y-auto">
+          <!-- Cart items list -->
+        </div>
+      </div>
+
+      <div class="border-t border-gray-100 pt-6 space-y-4">
+        <div class="flex justify-between text-xs font-semibold tracking-wide">
+          <span class="uppercase text-noir-gray">Total</span>
+          <span id="cartTotal" class="text-black">PKR 0</span>
+        </div>
+        <button id="whatsappCheckoutBtn" class="w-full py-4 bg-black text-white text-xs font-semibold tracking-wide-custom uppercase hover:bg-neutral-800 transition-colors">
+          ORDER VIA WHATSAPP
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    const WHATSAPP_NUMBER = "+923092230740";
+
+    const products = [
+      {
+        id: "p1",
+        name: "NOIR DE NOIR",
+        category: "EXTRAIT DE PARFUM",
+        price: 18500,
+        image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=800&auto=format&fit=crop"
+      },
+      {
+        id: "p2",
+        name: "AMBER ROYALE",
+        category: "EAU DE PARFUM",
+        price: 14500,
+        image: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=800&auto=format&fit=crop"
+      },
+      {
+        id: "p3",
+        name: "OUD ABSOLU",
+        category: "EXTRAIT DE PARFUM",
+        price: 21000,
+        image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=800&auto=format&fit=crop"
+      }
+    ];
+
+    let cart = [];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+      renderProducts();
+      setupCartListeners();
+    });
+
+    function renderProducts() {
+      const grid = document.getElementById("productGrid");
+      grid.innerHTML = products.map(product => `
+        <div class="group space-y-4">
+          <div class="aspect-[4/5] bg-neutral-100 overflow-hidden relative">
+            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 grayscale contrast-110">
+            <button onclick="addToCart('${product.id}')" class="absolute bottom-4 left-4 right-4 bg-white text-black py-3 text-[10px] font-semibold tracking-wide-custom uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm hover:bg-black hover:text-white">
+              ADD TO BAG
+            </button>
+          </div>
+          <div class="space-y-1">
+            <span class="text-[10px] text-noir-gray tracking-luxury uppercase block">${product.category}</span>
+            <h3 class="font-serif text-sm font-semibold tracking-wide uppercase text-black">${product.name}</h3>
+            <p class="text-xs text-black font-light">PKR ${product.price.toLocaleString()}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function addToCart(productId) {
+      const item = products.find(p => p.id === productId);
+      const existing = cart.find(c => c.id === productId);
+
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...item, qty: 1 });
+      }
+
+      updateCartUI();
+      openCart();
+    }
+
+    function updateCartUI() {
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      document.getElementById("cartCount").textContent = totalItems;
+      document.getElementById("cartTotal").textContent = `PKR ${totalPrice.toLocaleString()}`;
+
+      const listContainer = document.getElementById("cartItemsList");
+      if (cart.length === 0) {
+        listContainer.innerHTML = `<p class="text-noir-gray text-xs text-center py-10 font-light">Your bag is empty.</p>`;
+      } else {
+        listContainer.innerHTML = cart.map(item => `
+          <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+            <div class="flex items-center space-x-3">
+              <img src="${item.image}" class="w-12 h-14 object-cover grayscale">
+              <div class="space-y-1">
+                <h4 class="text-xs font-serif font-semibold tracking-wide uppercase text-black">${item.name}</h4>
+                <p class="text-[10px] text-noir-gray">PKR ${item.price.toLocaleString()} × ${item.qty}</p>
+              </div>
+            </div>
+            <button onclick="removeFromCart('${item.id}')" class="text-noir-gray hover:text-black p-1">
+              <i data-lucide="trash-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `).join('');
+        lucide.createIcons();
+      }
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(item => item.id !== id);
+      updateCartUI();
+    }
+
+    function setupCartListeners() {
+      const modal = document.getElementById("cartModal");
+      const sidebar = document.getElementById("cartSidebar");
+
+      const open = () => {
+        modal.classList.remove("pointer-events-none", "opacity-0");
+        sidebar.classList.remove("translate-x-full");
+      };
+
+      const close = () => {
+        modal.classList.add("pointer-events-none", "opacity-0");
+        sidebar.classList.add("translate-x-full");
+      };
+
+      document.getElementById("cartBtn").addEventListener("click", open);
+      document.getElementById("closeCartBtn").addEventListener("click", close);
+      document.getElementById("cartOverlay").addEventListener("click", close);
+
+      document.getElementById("whatsappCheckoutBtn").addEventListener("click", () => {
+        if (cart.length === 0) return alert("Your bag is empty.");
+
+        let message = `Hello NOIR PERFUMES,\nI would like to order:\n\n`;
+        cart.forEach((item, idx) => {
+          message += `${idx + 1}. *${item.name}* - Qty: ${item.qty} | PKR ${(item.price * item.qty).toLocaleString()}\n`;
+        });
+
+        const total = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+        message += `\n*Total Amount:* PKR ${total.toLocaleString()}\n\nPlease confirm availability.`;
+
+        window.open(`https://wa.me/${WHATSAPP_NUMBER.replace('+', '')}?text=${encodeURIComponent(message)}`, '_blank');
+      });
+    }
+
+    window.addToCart = addToCart;
+    window.removeFromCart = removeFromCart;
+    window.openCart = () => document.getElementById("cartBtn").click();
+  </script>
+</body>
+</html>
