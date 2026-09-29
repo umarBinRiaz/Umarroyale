@@ -9,16 +9,16 @@
                 name: "UMAR ROYALE",
                 currency: "Rs.",
                 email: "maison@umarroyale.com",
-                phone: "+92 300 0085347",
-                address: "Studio 4, Shahrah-e-Faisal, Karachi, Pakistan",
+                phone: "+92 309 2230740",
+                address: "E-Store",
                 whatsapp: "923092230740",
-                instagram: "https://instagram.com/umarroyale",
+                instagram: "https://instagram.com/umar.royale",
                 shippingFlat: 250,
                 freeShippingOver: 5000,
                 payments: [
                     { id: "cod", label: "Cash on Delivery", note: "Pay the courier when your parcel arrives.", enabled: true },
-                    { id: "bank", label: "Bank Transfer â€” Advance", note: "Bank Alfalah â€” Karachi Main Â· 0102 7654 3210 Â· Umar Royale", enabled: true },
-                    { id: "easypaisa", label: "Easypaisa â€” Advance", note: "Send to 0300-0085347 and enter the transaction ID.", enabled: true }
+                    // { id: "bank", label: "Bank Transfer â€” Advance", note: "Bank Alfalah â€” Karachi Main Â· 0102 7654 3210 Â· Umar Royale", enabled: true },
+                    { id: "easypaisa/jazzcash", label: "Easypaisa â€” Advance", note: "Send to 0300-0085347 and enter the transaction ID.", enabled: true }
                 ]
             };
 
